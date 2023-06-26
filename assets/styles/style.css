@@ -15,11 +15,11 @@ body {
 
 #main {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 97vw;
   max-width: 1000px;
   margin: auto;
-  flex-flow: column;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -158,10 +158,10 @@ body {
 }
 
 @keyframes top {
-  from,
-  to {
+  0% {
     transform: translateY(-15px);
   }
+
   50% {
     transform: translateY(-40px);
   }
@@ -175,6 +175,7 @@ body {
   0% {
     transform: translateX(-15px);
   }
+
   50% {
     transform: translateX(-40px);
   }
@@ -188,6 +189,7 @@ body {
   0% {
     transform: translateX(15px);
   }
+
   50% {
     transform: translateX(40px);
   }
@@ -202,6 +204,7 @@ body {
   0% {
     transform: translateY(15px);
   }
+
   50% {
     transform: translateY(40px);
   }
