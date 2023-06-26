@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <title>scoring-a-bowling-game</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <div id="main">
+      <h2 class="title">Scoring A Bowling Game</h2>
+      <div class="loading-holder">
+        <div class="loader">
+          <div class="item top"></div>
+          <div class="item left"></div>
+          <div class="item right"></div>
+          <div class="item bottom"></div>
+        </div>
+      </div>
+      <div class="game">
+        <div class="frame">
+          <div class="frame-number">Frame 1</div>
+          <div class="frame-number">Frame 2</div>
+          <div class="frame-number">Frame 3</div>
+          <div class="frame-number">Frame 4</div>
+          <div class="frame-number">Frame 5</div>
+          <div class="frame-number">Frame 6</div>
+          <div class="frame-number">Frame 7</div>
+          <div class="frame-number">Frame 8</div>
+          <div class="frame-number">Frame 9</div>
+          <div class="frame-number">Frame 10</div>
+
+          <div class="roll 1"></div>
+          <div class="roll 2"></div>
+          <div class="roll 3"></div>
+          <div class="roll 4"></div>
+          <div class="roll 5"></div>
+          <div class="roll 6"></div>
+          <div class="roll 7"></div>
+          <div class="roll 8"></div>
+          <div class="roll 9"></div>
+          <div class="roll 10"></div>
+
+          <div class="roll-total 1"></div>
+          <div class="roll-total 2"></div>
+          <div class="roll-total 3"></div>
+          <div class="roll-total 4"></div>
+          <div class="roll-total 5"></div>
+          <div class="roll-total 6"></div>
+          <div class="roll-total 7"></div>
+          <div class="roll-total 8"></div>
+          <div class="roll-total 9"></div>
+          <div class="roll-total 10"></div>
+        </div>
+        <div class="total-sec">
+          <h3>Total Pins :</h3>
+          <p class="grand-total"></p>
+        </div>
+      </div>
+      <div class="roll-btn-sec">
+        <button class="roll-btn">Click to Roll ball</button>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+
     <script type="module" src="./assets/scripts/script.js"></script>
-</body>
+  </body>
 </html>
