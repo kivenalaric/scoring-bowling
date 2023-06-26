@@ -16,7 +16,7 @@ body {
 #main {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   width: 97vw;
   max-width: 1000px;
   margin: auto;
