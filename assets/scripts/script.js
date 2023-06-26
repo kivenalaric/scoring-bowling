@@ -18,33 +18,58 @@ function getRandomPin(remainingPins) {
 }
 
 const rollBall = () => {
-  let standingPins = 10;
-
   for (let i = 0; i < score.length; i++) {
     count++;
-    if (count <= 100) {
-      const pinsHitFirst = getRandomPin(standingPins);
-      standingPins = standingPins - pinsHitFirst;
-      const pinsHitSecond = getRandomPin(standingPins);
-      const totalHits = pinsHitFirst + pinsHitSecond;
-      totalScores += totalHits;
-      score[i].innerHTML = `${pinsHitFirst} / ${pinsHitSecond}`;
-      totalScore[i].innerHTML = totalScores;
-      totalDisplay.innerHTML = `${totalScores}`;
-      loading.classList.add("active");
-      loading.innerHTML = "Game Over!! Reset to Play again.";
-    } else {
-      loading.innerHTML = "Number of Games Exceeded";
-      loading.classList.add("active");
-      return;
-    }
+  }
+
+  let standingPins = 10;
+  const pinsHitFirst = getRandomPin(standingPins);
+  standingPins = standingPins - pinsHitFirst;
+  const pinsHitSecond = getRandomPin(standingPins);
+  const totalHits = pinsHitFirst + pinsHitSecond;
+  totalScores += totalHits;
+
+  if (count === 10) {
+    score[0].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[0].innerHTML = totalHits;
+  } else if (count === 20) {
+    score[1].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[1].innerHTML = totalScores;
+  } else if (count === 30) {
+    score[2].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[2].innerHTML = totalScores;
+  } else if (count === 40) {
+    score[3].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[3].innerHTML = totalScores;
+  } else if (count === 50) {
+    score[4].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[4].innerHTML = totalScores;
+  } else if (count === 60) {
+    score[5].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[5].innerHTML = totalScores;
+  } else if (count === 70) {
+    score[6].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[6].innerHTML = totalScores;
+  } else if (count === 80) {
+    score[7].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[7].innerHTML = totalScores;
+  } else if (count === 90) {
+    score[8].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[8].innerHTML = totalScores;
+  } else if (count === 100) {
+    score[9].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`;
+    totalScore[9].innerHTML = totalScores;
+    totalDisplay.innerHTML = totalScores;
+  } else {
+    loading.innerHTML = "Number of Games Exceeded";
+    loading.classList.add("active");
   }
 };
+
 
 resetBtn.addEventListener("click", () => window.location.reload());
 
 rollBtn.addEventListener("click", () => {
-  loading.classList.add("active");
   loading.classList.add("active");
   top.classList.add("active");
   bottom.classList.add("active");
@@ -55,12 +80,12 @@ rollBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     rollBall();
-    loading.classList.remove("active");
-    top.classList.remove("active");
-    bottom.classList.remove("active");
-    left.classList.remove("active");
-    right.classList.remove("active");
-    loading.classList.remove("active");
-    loadingHolder.classList.remove("active");
+    loading.classList.remove('active');
+    top.classList.remove('active');
+    bottom.classList.remove('active');
+    left.classList.remove('active');
+    right.classList.remove('active');
+    loadingHolder.classList.remove('active');
+    rollBtn.disabled = false;
   }, Math.floor(Math.random() * (1900 - 500 + 1)) + 500);
 });
