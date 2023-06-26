@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: fit-content;
+  justify-content: center;
+  width: 100vw;
+}
+
 #main {
   display: flex;
   flex-wrap: wrap;
