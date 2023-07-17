@@ -65,7 +65,8 @@ body {
 }
 
 .roll,
-.roll-total {
+.roll-total,
+.frame-total {
   border: 1px solid #aeaeae;
   padding: 8px;
   text-align: center;
