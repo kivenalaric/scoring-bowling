@@ -33,7 +33,7 @@ const rollBall = () => {
   if (count <= 10) {
     score[0].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`
     totalScore[0].innerHTML = totalHits
-    frameSum[0].innerHTML  = totalHits
+    frameSum[0].innerHTML = totalHits
   } else if (count <= 20) {
     score[1].innerHTML = `${pinsHitFirst}/${pinsHitSecond}`
     totalScore[1].innerHTML = totalHits
